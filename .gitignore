@@ -1,0 +1,31 @@
+﻿
+# Ignore all media files
+
+*.mp4
+
+*.bak
+
+
+
+# Ignore the contents of the Meeting Recordings directory, but keep the directory itself
+
+/Meeting Recordings/*
+
+!/Meeting Recordings/_Burgess - Commissioners/
+
+!/Meeting Recordings/_EDC/
+
+!/Meeting Recordings/_Parks/
+
+!/Meeting Recordings/_Planning - Zoning/
+
+
+
+# Ignore IIS/Visual Studio hidden files
+
+.vs/
+
+*.user
+
+*.suo
+
