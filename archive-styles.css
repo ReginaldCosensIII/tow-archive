@@ -1,4 +1,4 @@
-/* archive-styles.css - TOW 2025 Heritage Branding (Sticky Footer & Classic Hover) */
+/* archive-styles.css - TOW 2025 Heritage Branding (Responsive & Sticky Footer) */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap');
 
@@ -7,7 +7,7 @@
     --bg-header: #ffffff;
     --bg-body: #f4f3ec;
     --text-main: #333333;
-    --tow-gold: #c6a855;
+    --tow-gold: #ffcc00;
 }
 
 body {
@@ -18,7 +18,6 @@ body {
     margin: 0;
     line-height: 1.6;
     border-top: 3px solid var(--tow-gold);
-    /* Sticky Footer Setup: Forces body to take up at least the full viewport height */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -48,14 +47,11 @@ header img {
 .container {
     width: 100%;
     box-sizing: border-box;
-    /* Reduced from 1200px to stop it from spreading too wide */
     max-width: 1300px;
     margin: 0 auto;
-    /* Increased left/right padding from 40px to 60px to push content closer to the center */
     padding: 15px 60px;
 }
 
-/* Sticky Footer Setup: Tells the main content block to expand and push the footer down */
 main.container {
     flex: 1;
 }
@@ -128,7 +124,6 @@ footer {
     color: #ffffff;
     padding: 8px 0 20px 0;
     margin-top: 35px;
-    /* Acts as a minimum gap when content is extremely long */
     font-size: 0.95em;
 }
 
@@ -167,9 +162,12 @@ footer {
 }
 
 footer img {
-    height: 65px;
-    max-height: none;
-    width: auto;
+    /* Pure responsive scaling: Shrinks naturally as the flex column gets squeezed */
+    max-width: 100%;
+    max-height: 65px;
+    /* Caps the maximum height on large desktop screens */
+    height: auto;
+    /* Maintains the exact aspect ratio so it doesn't warp */
     margin-top: 0;
 }
 
@@ -193,4 +191,41 @@ footer a:hover {
     margin: 0 !important;
     padding: 0 !important;
     line-height: 1.4 !important;
+}
+
+/* =========================================
+   Mobile & Tablet Breakpoints 
+   ========================================= */
+@media (max-width: 768px) {
+    .container {
+        /* Reduces the 60px desktop padding so mobile text isn't squeezed */
+        padding: 15px 20px;
+    }
+
+    header .container {
+        /* Centers the header logo on small screens */
+        align-items: center;
+    }
+
+    header img {
+        /* Ensures the logo scales down and doesn't overflow off-screen */
+        height: auto;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .footer-grid {
+        /* Stacks the 3 footer columns vertically instead of side-by-side */
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        /* Adds clean breathing room between the stacked columns */
+    }
+
+    .footer-column.left,
+    .footer-column.center,
+    .footer-column.right {
+        /* Forces all stacked footer text/images to center align perfectly */
+        text-align: center;
+    }
 }
