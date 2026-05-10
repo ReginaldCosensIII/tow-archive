@@ -1,0 +1,196 @@
+/* archive-styles.css - TOW 2025 Heritage Branding (Sticky Footer & Classic Hover) */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap');
+
+:root {
+    --tow-navy: #004b7c;
+    --bg-header: #ffffff;
+    --bg-body: #f4f3ec;
+    --text-main: #333333;
+    --tow-gold: #c6a855;
+}
+
+body {
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 17.5px;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.6;
+    border-top: 3px solid var(--tow-gold);
+    /* Sticky Footer Setup: Forces body to take up at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--bg-header);
+    padding: 0;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+header img {
+    height: 100px;
+    max-height: none;
+    width: auto;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    /* Reduced from 1200px to stop it from spreading too wide */
+    max-width: 1300px;
+    margin: 0 auto;
+    /* Increased left/right padding from 40px to 60px to push content closer to the center */
+    padding: 15px 60px;
+}
+
+/* Sticky Footer Setup: Tells the main content block to expand and push the footer down */
+main.container {
+    flex: 1;
+}
+
+h1 {
+    color: var(--tow-navy);
+    font-size: 2.1em;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border: none;
+}
+
+/* Accordion Styling */
+dl {
+    margin: 0;
+}
+
+dt {
+    margin-bottom: 6px;
+}
+
+dt h4 {
+    background: transparent;
+    color: var(--tow-navy);
+    padding: 6px 0;
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+
+dt h4:hover {
+    color: #003355;
+}
+
+dt h4::after {
+    content: none;
+}
+
+dd {
+    background: transparent;
+    margin: 0 0 15px 15px;
+    padding: 5px 0 5px 15px;
+    border-left: 2px solid #ccc;
+}
+
+dd p {
+    margin: 6px 0;
+}
+
+dd a {
+    color: var(--tow-navy);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+
+dd a:hover {
+    text-decoration: underline;
+    color: #003355;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--tow-navy);
+    color: #ffffff;
+    padding: 8px 0 20px 0;
+    margin-top: 35px;
+    /* Acts as a minimum gap when content is extremely long */
+    font-size: 0.95em;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-column.left {
+    text-align: left;
+}
+
+.footer-column.center {
+    font-weight: 300;
+}
+
+.footer-column.center strong {
+    font-weight: 700;
+}
+
+.footer-column.right {
+    text-align: center;
+    font-weight: 300;
+}
+
+.footer-column p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+}
+
+footer img {
+    height: 65px;
+    max-height: none;
+    width: auto;
+    margin-top: 0;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#vts-user-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 !important;
+}
+
+#vts-user-menu li {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+}
