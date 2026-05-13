@@ -118,7 +118,8 @@
                                     <p style="margin: 0 0 5px 0;"><a href="https://www.civicplus.com/">Government
                                             Websites by CivicPlus&reg;</a></p>
                                     <ul id="vts-user-menu">
-                                        <li class="first"><a href="/user/login?current=node/1">Login</a></li>
+                                        <!--Disabled May 2026: Legacy Drupal login path (404). Preserved for future auth portal reference.
+                                        <li class="first"><a href="/user/login?current=node/1">Login</a></li>-->
                                     </ul>
                                 </div>
                             </div>
